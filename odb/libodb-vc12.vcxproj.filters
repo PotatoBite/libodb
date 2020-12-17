@@ -11,7 +11,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-
     <ClInclude Include="std-unordered-map-traits.hxx">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -374,7 +373,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-
     <ClCompile Include="callback.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -438,7 +436,6 @@
     <ClCompile Include="details\shared-ptr\base.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
-
     <ClCompile Include="details\win32\init.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -455,6 +452,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="details\win32\exceptions.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details\win32\dll.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
