@@ -247,9 +247,9 @@ export(TARGETS libodb
   NAMESPACE ${PROJECT_NAME}::
 )
 
-if(MSVC AND BUILD_SHARED_LIBS)
-  install(FILES
-    $<TARGET_PDB_FILE:${PROJECT_NAME}>
-    DESTINATION lib
-  )
-endif()
+#if(MSVC AND BUILD_SHARED_LIBS)
+#  install(FILES
+#    $<TARGET_PDB_FILE:${PROJECT_NAME}>
+#    DESTINATION lib
+#  )
+#endif()
