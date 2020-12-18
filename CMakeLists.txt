@@ -7,6 +7,9 @@ if(MSVC)
   set(CMAKE_DEBUG_POSTFIX d)
 endif()
 
+set (CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+set (BUILD_SHARED_LIBS TRUE)
+
 add_library(libodb
 ${CMAKE_CURRENT_SOURCE_DIR}/odb/database.cxx
 ${CMAKE_CURRENT_SOURCE_DIR}/odb/database.hxx
@@ -182,6 +185,9 @@ ${CMAKE_CURRENT_SOURCE_DIR}/odb/tr1/memory.hxx
 ${CMAKE_CURRENT_SOURCE_DIR}/odb/tr1/pointer-traits.hxx
 )
 
+include(GenerateExportHeader)
+generate_export_header(libodb)
+
 target_include_directories(libodb
   PRIVATE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
@@ -197,6 +203,7 @@ target_compile_definitions(libodb
   _CRT_STDC_NO_DEPRECATE
   _USRDLL
   LIBODB_DYNAMIC_LIB
+  #LIBODB_SHARED_LIB
 )
 
 include(CMakePackageConfigHelpers)
