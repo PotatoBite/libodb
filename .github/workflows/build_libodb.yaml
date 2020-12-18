@@ -43,6 +43,14 @@ jobs:
       shell: bash
       # Execute the build.  You can specify a specific target with "--target <NAME>"
       run: cmake --build build --config $BUILD_TYPE --target install
+    
+    - uses: djnicholson/release-action@v2.11
+      with:
+        token: ${{ secrets.SECRET_4_PUBLISH }}
+        asset-name: 'libodb-sqlite.lib'
+        release-name: 'First release'
+        tag-name: 'v2.4-alpha'
+        file: 'C:/Program Files (x86)/libodb/lib/libodb.lib'
 
     #- name: Test
     #  working-directory: ${{runner.workspace}}/build
