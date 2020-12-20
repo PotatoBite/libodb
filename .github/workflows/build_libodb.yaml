@@ -42,3 +42,10 @@ jobs:
         tag-name: 'v2.4-static'
         file: 'C:/Program Files (x86)/libodb/lib/libodb.lib'
 
+    - uses: djnicholson/release-action@v2.11
+      with:
+        token: ${{ secrets.SECRET_4_PUBLISH }}
+        asset-name: 'libodb.dll'
+        release-name: 'Dynamic release'
+        tag-name: 'v2.4-dynamic'
+        file: 'C:/Program Files (x86)/libodb/bin/libodb.dll'
